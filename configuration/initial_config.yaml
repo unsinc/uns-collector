@@ -1,0 +1,23 @@
+- name: Update the APT repository
+  apt:
+    update_cache: yes
+    force_apt_get: yes
+  changed_when: False
+
+- name: Initial Collector Configuration
+  apt:
+    name:  
+      - auditd
+      - htop
+      - nano
+      - psmisc
+      - net-tools
+     
+- name: Expand the ubuntu-lb to all the available space
+  lvol:
+    vg: ubuntu-vg
+    lv: ubuntu-lv
+    size: 100%FREE
+    resizefs: true
+    force: yes
+  ignore_errors: true

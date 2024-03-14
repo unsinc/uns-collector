@@ -1,6 +1,6 @@
 - name: install cron job (ansible-pull)
   cron:
     user: ansible
-    name: "Sensor Configuration"
+    name: "Collector Configuration"
     minute: "10"
     job: "sudo ansible-pull -U https://github.com/unsinc/uns-sensor.git >/dev/null 2>&1 | logger -t Collector Configuration Validation"
