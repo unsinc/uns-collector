@@ -23,6 +23,6 @@
 - name: Extend the filesystem
   filesystem:
     fstype: ext4
-    dev: "/dev/mapper/{{vg_name}}-{{lv_name}}"
+    dev: "/dev/mapper/ubuntu--vg-ubuntu--lv"
     resizefs: true
   ignore_errors: true
