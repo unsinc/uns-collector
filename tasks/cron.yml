@@ -3,4 +3,4 @@
     user: ansible
     name: "Collector Configuration"
     minute: "10"
-    job: "sudo ansible-pull -U https://github.com/unsinc/uns-collector.git >/dev/null 2>&1 | logger -t Collector Configuration Validation"
+    job: "sudo ansible-pull -o -U https://github.com/unsinc/uns-collector.git >/dev/null 2>&1 | logger -t Collector Configuration Validation"
