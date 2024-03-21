@@ -18,6 +18,11 @@
     vg: ubuntu-vg
     lv: ubuntu-lv
     size: 100%FREE
+  ignore_errors: true
+
+- name: Extend the filesystem
+  filesystem:
+    fstype: ext4
+    dev: "/dev/mapper/{{vg_name}}-{{lv_name}}"
     resizefs: true
-    force: yes
   ignore_errors: true
