@@ -119,5 +119,12 @@
     direction: in
     interface: "{{ int_main['content'] | b64decode }}"
 
+- name: Allow 9525
+  community.general.ufw:
+    rule: allow
+    port: "9525"
+    direction: in
+    interface: "{{ int_main['content'] | b64decode }}"
+
 - name: Set default deny inbound
   shell: "sudo ufw default deny incoming"
