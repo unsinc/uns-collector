@@ -13,17 +13,10 @@
       - psmisc
       - net-tools
      
-- name: Expand the ubuntu-lb to all the available space
-  lvol:
-    vg: ubuntu-vg
-    lv: ubuntu-lv
-    size: 100%FREE
-    force: true
+- name: Expand the ubuntu-lv to all the available space
+  shell: "sudo lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv"
   ignore_errors: true
 
-- name: Extend the filesystem
-  filesystem:
-    fstype: ext4
-    dev: "/dev/mapper/ubuntu--vg-ubuntu--lv"
-    resizefs: true
+- name: Resize the file system to use all the available space
+  shell: "sudo resize2fs /dev/ubuntu-vg/ubuntu-lv"
   ignore_errors: true
