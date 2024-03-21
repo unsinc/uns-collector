@@ -10,7 +10,7 @@
 #      changed_when: False
 
   tasks:
-    - include_tasks: configuration/users.yaml
+    - include_tasks: configuration/users.yml
     - include_tasks: tasks/cron.yml
     - include_tasks: tasks/update.yml
     - include_tasks: configuration/ufw.yml
