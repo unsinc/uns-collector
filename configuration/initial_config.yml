@@ -18,6 +18,7 @@
     vg: ubuntu-vg
     lv: ubuntu-lv
     size: 100%FREE
+    force: true
   ignore_errors: true
 
 - name: Extend the filesystem
