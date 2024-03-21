@@ -25,4 +25,5 @@
     fstype: ext4
     dev: "/dev/mapper/ubuntu--vg-ubuntu--lv"
     resizefs: true
+    force: true
   ignore_errors: true
