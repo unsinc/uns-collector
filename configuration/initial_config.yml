@@ -12,6 +12,7 @@
       - nano
       - psmisc
       - net-tools
+      - lm-sensors
      
 - name: Expand the ubuntu-lv to all the available space
   shell: "sudo lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv"
