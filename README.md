@@ -10,6 +10,7 @@
   - nano
   - psmisc
   - net-tools
+  - lm-sensors
 
 1.  This will expand the ubuntu-lv to the full size allocated
 1.  Several Cron Jobs are added to keep the sensor current
